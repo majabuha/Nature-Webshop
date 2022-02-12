@@ -20,7 +20,7 @@ const ShoppingCart = () => {
     }, [])
 
 
-      const cartItems = Object.values(cart[0]);
+   //   const cartItems = Object.values(cart[0]);
 
     let newPriceArray = state.products.map(product => {
         return { ...product, totalPrice: product.amount * product.price }
