@@ -9,7 +9,8 @@
 
 ## Login credentials
 
-username: user@user.com  ||  admin@admin.com
+username: user@user.com  ||  admin@admin.com 
+<br />
 password: user           ||  admin
 
 ## User Stories
