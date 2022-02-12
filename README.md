@@ -1,7 +1,6 @@
 
 # Nature Webshop App
-<hr>
-<br>
+
 
 ## Running the application
 - `npm install`
