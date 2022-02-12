@@ -13,14 +13,23 @@ const ShoppingCart = () => {
 
         const getLocalCart = JSON.parse(localStorage.getItem("cart") || '[]');
 
-        if (getLocalCart !== 0) {
-            setCart([...getLocalCart])
+        if (getLocalCart) {
+            setCart([
+                ...getLocalCart,
+                ...cart])
         }
 
     }, [])
 
+    // useEffect(() => {
 
-   //   const cartItems = Object.values(cart[0]);
+    // 	localStorage.setItem("cart", JSON.stringify(cart));
+    // 	console.log(cart);
+
+    // }, [cart]);
+
+
+    //   const cartItems = Object.values(cart[0]);
 
     let newPriceArray = state.products.map(product => {
         return { ...product, totalPrice: product.amount * product.price }
@@ -41,7 +50,7 @@ const ShoppingCart = () => {
 
         <h3 className='cart-line' data-testid="shopTitle">Shopping Cart</h3>
 
-        { state.products && state.products.map((item: ShoppingType) => (
+        {state.products && state.products.map((item: ShoppingType) => (
             <div className='items-in-cart'>
                 <ShoppingItem key={item.id} item={item} />
                 <p className='lager'>{item.lager} left in stock</p>

@@ -46,14 +46,17 @@ const Navbar = () => {
                 <FaHome style={style} />
             </button>
 
-            <form onSubmit={handleSubmit}>
-                <input 
-                type="text" 
-                className='navbar-input'
-                placeholder="Enter product.." 
-                value={searchTerm}
+            <form 
+            className='search-bar'
+            onSubmit={handleSubmit}>
+                <input
+                    type="text"
+                    className='navbar-input'
+                    placeholder="Enter product.."
+                    value={searchTerm}
                     onChange={handleChange} />
                 <button
+                    className='search-btn'
                     type="submit"
                     data-testid="submitBtn"
                     style={style} >
@@ -64,17 +67,17 @@ const Navbar = () => {
         <li
             className="navbar--item"
             data-testid="navbarBtn">
-                
+
             {state.showShoppingCart ?
                 <button
                     className="navbar--button"
                     onClick={() => dispatch(toggleShoppingCart())}>
-                    
+
                 </button> :
                 <button
                     className="navbar--button"
                     onClick={() => dispatch(toggleShoppingCart())}>
-                    
+
                 </button>}
             <span
                 className="navbar--shoppingamount"

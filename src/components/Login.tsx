@@ -221,6 +221,8 @@ function LogIn() {
 
                     <form className='admin-new-product'>
 
+                        <p className='new-product-title'>Add new product</p>
+                        
                         <div className="create-product-title">
                             <label htmlFor="">
                                 Product Name:{' '}
