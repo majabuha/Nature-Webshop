@@ -1,0 +1,66 @@
+[
+    {
+        "id": 0,
+        "name": "Boots",
+        "description": "Hiking boots are critical to your comfort and performance on the trail, but this no longer means a stiff and burly model that will weigh you down. The trend is toward lighter materials that still offer decent support, and waterproof boots are the most popular by far! What makes this boot so popular is its lightweight and comfortable feel at such a reasonable price. For $135, you get good cushioning underfoot, trusty Vibram outsoles, and a waterproof membrane.",
+        "imageUrl": "https://images.unsplash.com/photo-1462117580841-44df9d9d23fd?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80",
+        "price": 1799,
+        "lager": 20
+    },
+    {
+        "id": 1,
+        "name": "Insulated bottle",
+        "description": "There is no need for us to tell you the value in staying hydrated, no matter what your day has in store. The most ubiquitous water bottle on the market and a staple in the outdoors, combining a low weight with a simple but functional build for everything from hiking to daily use.",
+        "imageUrl": "https://images.unsplash.com/photo-1593546189050-2705e874df8c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=735&q=80",
+        "price": 499,
+        "lager": 31
+    },
+    {
+        "id": 2,
+        "name": "Backpack",
+        "description": "The backpack made with enough room for couple days trips,suitable for men,women and children. Outdoor hydration backpack is made of polyester, with strong tear-resistance and strong metal zipper. Large front zipped pocket for easy storage and organization. Two side expansible mesh for water bottle and umbrella. Large main compartment is roomy enough for clothes which is with water bladder pouch. Our camel backpack including adjustable chest belt, reflective safety decoration design and thick breathable padded back and shoulder straps, suitable for cycling, mountaineering survival, hiking, hunting etc.",
+        "imageUrl": "https://images.unsplash.com/photo-1620953749696-38989c40eadb?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80",
+        "price": 999,
+        "lager": 18
+    },
+    {
+        "id": 3,
+        "name": "Compass",
+        "description": "Navigation in nature can be tricky due to poor visibility and/or indistinct landscape characteristics. Handheld GPS devices, watches with built-in GPS or Smartphones of course come in handy but can be useless if out of battery or signal. Therefore, there is nothing more reliable than an “old-school” compass. Compasses have many advantages over electronic navigation devices; they are lighter, not dependent on batteries and more durable. They show the four cardinal directions (North, East, South and West), bearing and other measurements important for navigation.",
+        "imageUrl": "https://images.unsplash.com/photo-1464716821973-e1031cfa43dc?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=645&q=80",
+        "price": 299,
+        "lager": 21
+    },
+    {
+        "id": 4,
+        "name": "Hiking Shoes",
+        "description": "Built like a trail running shoe but with added ankle support and protection, the Salomon is our favorite all-around hiking boot for 2022. These boots offer an impressive combination of comfort and low weight, all while retaining solid toe protection, a stable chassis, and a lug design that grips exceptionally well.",
+        "imageUrl": "https://images.unsplash.com/photo-1582898967731-b5834427fd66?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80",
+        "price": 1349,
+        "lager": 27
+    },
+    {
+        "id": 5,
+        "name": "Rain jacket",
+        "description": "From months of daily drizzle to heavy downpour in the mountains, we are acutely aware of the benefits of a quality waterproof and breathable shell. The latest version is more protective and durable, breathes better, and its interior is more comfortable and less prone to feeling clammy thanks to a thicker lining. The jacket also is well-equipped and competitively lightweight with two hand pockets and a coated front zipper.",
+        "imageUrl": "https://images.unsplash.com/photo-1601701740781-fb88756b7e37?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=688&q=80",
+        "price": 1699,
+        "lager": 10
+    },
+      {
+        "id": 6,
+        "name": "Hiking pants",
+        "description": "A great pair of hiking pants offers comfort, freedom of movement, the versatility to perform well in a range of environments, and durability over the long haul. Doubling as a great climbing pant, you get nice range of motion thanks to the stretchy fabric and semi-slim cut that moves with you. In terms of features, it has a zippered cargo pocket, which is helpful for storage, snaps for rolling up the legs, and a low-profile waistband adjuster to the right of the top button. ",
+        "imageUrl": "https://images.unsplash.com/photo-1613560137150-5c20f1fb0fbc?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=764&q=80",
+        "price": 1299,
+        "lager": 15
+    },
+    {
+        "id": 7,
+        "name": "Shirt",
+        "description": "The shirt has a large mesh panel across the back and two mesh side panels under the arms. These allow venting at the rear (when you aren’t wearing a backpack) and under your arms as you walk. There is a velcro tab on the rear of the shirt that allows you to secure the back vent in an “open” position to maximise venting — but obviously this isn’t particularly useful when you are wearing a backpack!",
+        "imageUrl": "https://images.unsplash.com/photo-1482961667792-d164d3e7ab3d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80",
+        "price": 499,
+        "lager": 12
+    }     
+]
