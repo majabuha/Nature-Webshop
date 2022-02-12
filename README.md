@@ -7,7 +7,10 @@
 - `npm start` to launch the app
 - `npm run tests` to check test cases
 
+## Login credentials
 
+username: user@user.com  ||  admin@admin.com
+password: user           ||  admin
 
 ## User Stories
 
@@ -30,3 +33,5 @@
 17. As a user I want to see total number of products I am ordering so I know if I added more items than I thought.
 18. As a user I want to see what is the total sum of products in the cart so I know how much I’m spending.
 19. As a user I want to be able to delete entire cart in case I don’t want to buy anything in the end.
+
+
