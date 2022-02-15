@@ -20,7 +20,7 @@ password: user           ||  admin
 3. As a user I want to be able to navigate back to main page easily after searching for products.
 4. As a user I want to see more details about product to be sure I am buying good quality.
 5. As a user I want to be able to login with my credentials so I am able to smoothly make my order.
-6. As a user I want to know if I filled information wrong so I am able to correct it.
+6. As a user I want to know if I filled username or email wrong so I am able to correct it.
 7. As an administrator I want to be able to log in so that I am able to moderate.
 8. As an administrator I want to be able to add new product so I can notify customers of new merchandise. 
 9. As a user I want to see notification how many items I currently have in cart so I am aware that there are products in my cart.

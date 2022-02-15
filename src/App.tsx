@@ -1,5 +1,4 @@
 import React, { useReducer, useState } from 'react';
-import { useNavigate } from 'react-router-dom';
 import './App.css';
 import Navbar from './components/Navbar';
 import ShoppingCart from './components/ShoppingCart';

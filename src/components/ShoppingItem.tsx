@@ -35,6 +35,9 @@ const Item: React.FC<ShoppingItemProps> = ({ item }) => {
                     <AiFillCloseSquare />
                 </button>
             </span>
+            <div className='items-in-cart'>
+                <p className='lager'>{item.lager} left in stock</p>
+            </div>
             <div className="shopping--line"></div>
         </li>
     )

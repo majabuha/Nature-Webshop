@@ -7,29 +7,24 @@ import { resetList } from '../state/reducer';
 const ShoppingCart = () => {
     const { state, dispatch } = useContext(AppContext);
 
-    const [cart, setCart] = useState([state.products])
+    const [cart, setCart] = useState(state.products)
 
-    useEffect(() => {
+
+     useEffect(() => {
 
         const getLocalCart = JSON.parse(localStorage.getItem("cart") || '[]');
-
+   
         if (getLocalCart) {
-            setCart([
-                ...getLocalCart,
-                ...cart])
-        }
+            
+            setCart({
+                ...getLocalCart
+            })              
+        } 
 
     }, [])
 
-    // useEffect(() => {
-
-    // 	localStorage.setItem("cart", JSON.stringify(cart));
-    // 	console.log(cart);
-
-    // }, [cart]);
-
-
-    //   const cartItems = Object.values(cart[0]);
+   
+    //   const cartItems = Object.values(cart);
 
     let newPriceArray = state.products.map(product => {
         return { ...product, totalPrice: product.amount * product.price }
@@ -50,12 +45,10 @@ const ShoppingCart = () => {
 
         <h3 className='cart-line' data-testid="shopTitle">Shopping Cart</h3>
 
-        {state.products && state.products.map((item: ShoppingType) => (
-            <div className='items-in-cart'>
-                <ShoppingItem key={item.id} item={item} />
-                <p className='lager'>{item.lager} left in stock</p>
-            </div>
-
+        { state.products &&  state.products.map((item: ShoppingType) => (
+            
+                <ShoppingItem key={item.id} item={item} />               
+           
         ))}
 
         <p data-testid="shopPdtNb">Number of products: {sumAmount}</p>

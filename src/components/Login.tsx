@@ -1,7 +1,6 @@
 import React, { useContext, useEffect, useState } from 'react';
 import { UserData } from '../type/Users';
 import { IState } from '../state/state'
-import Products from './Products';
 import { AppContext } from '../state/context'
 import data from '../data.json'
 
@@ -276,7 +275,7 @@ function LogIn() {
                         </div>
 
                         <div className="create-product-img">
-                            <label>
+                            <label className='label-image-upload'>
                                 Select product image:{' '}
                                 <input type="file" accept="image/*" onChange={uploadImage} />
                             </label>

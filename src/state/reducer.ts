@@ -36,8 +36,8 @@ export function reducer(state: IState, action: Actions): IState {
         const newProduct = action.payload
         newProduct.amount = 1
         updatedProducts.push(newProduct)
-        let string = JSON.stringify(updatedProducts)
-        localStorage.setItem("cart", string)
+        let newPt = JSON.stringify(updatedProducts)
+        localStorage.setItem("cart", newPt)
 
         return {
           ...state,
@@ -51,6 +51,8 @@ export function reducer(state: IState, action: Actions): IState {
           ...updatedProducts[productIndex],
           amount: updatedProducts[productIndex].amount + 1
         };
+        let productIx = JSON.stringify(updatedProducts[productIndex])
+        localStorage.setItem("cart", productIx)
 
         return {
           ...state,
@@ -69,6 +71,8 @@ export function reducer(state: IState, action: Actions): IState {
         amount: copiedProducts[findIndex].amount + 1,
         lager: copiedProducts[findIndex].lager - 1
       };
+      let increaseCart = JSON.stringify( copiedProducts[findIndex])
+      localStorage.setItem("cart", increaseCart)
 
       return { ...state, products: [...copiedProducts] }
 
@@ -83,6 +87,8 @@ export function reducer(state: IState, action: Actions): IState {
           amount: copyProducts[findTheIndex].amount - 1,
           lager: copyProducts[findTheIndex].lager + 1
         };
+        let decreaseCart = JSON.stringify( copyProducts[findTheIndex])
+        localStorage.setItem("cart", decreaseCart)
 
         return { ...state, products: [...copyProducts] }
 
@@ -93,6 +99,9 @@ export function reducer(state: IState, action: Actions): IState {
     case ActionType.RemoveItem:
       
       const remainingProducts = state.products.filter(item => item.name !== action.payload.name)
+      let removeItemCart = JSON.stringify( remainingProducts)
+      localStorage.setItem("cart", removeItemCart)
+
       
       return {
         ...state, products: [...remainingProducts],
