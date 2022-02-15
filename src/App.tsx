@@ -1,4 +1,4 @@
-import React, { useReducer, useState } from 'react';
+import React, { useEffect, useReducer, useState } from 'react';
 import './App.css';
 import Navbar from './components/Navbar';
 import ShoppingCart from './components/ShoppingCart';
@@ -13,8 +13,6 @@ import Login from './components/Login'
 
 const App = () => {
   const [state, dispatch] = useReducer(reducer, initialState);
-
-
 
   return (
 

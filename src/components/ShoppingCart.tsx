@@ -7,24 +7,17 @@ import { resetList } from '../state/reducer';
 const ShoppingCart = () => {
     const { state, dispatch } = useContext(AppContext);
 
-    const [cart, setCart] = useState(state.products)
-
-
-     useEffect(() => {
+    useEffect(() => {
 
         const getLocalCart = JSON.parse(localStorage.getItem("cart") || '[]');
    
-        if (getLocalCart) {
-            
-            setCart({
+        if (getLocalCart) {            
+            dispatch({
                 ...getLocalCart
             })              
         } 
 
     }, [])
-
-   
-    //   const cartItems = Object.values(cart);
 
     let newPriceArray = state.products.map(product => {
         return { ...product, totalPrice: product.amount * product.price }

@@ -4,7 +4,7 @@
 
 ## Running the application
 - `npm install`
-- `npm start` to launch the app
+- `npm run start` to launch the app
 - `npm run tests` to check test cases
 
 ## Login credentials

@@ -8,6 +8,8 @@ const Products = () => {
     
     const { state } = useContext(AppContext);
 
+
+
     localStorage.setItem('products', JSON.stringify(state.overview))
  
     // if (!localStorage.getItem('products')) {
