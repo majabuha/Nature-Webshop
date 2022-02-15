@@ -34,5 +34,6 @@ password: user           ||  admin
 17. As a user I want to see total number of products I am ordering so I know if I added more items than I thought.
 18. As a user I want to see what is the total sum of products in the cart so I know how much I’m spending.
 19. As a user I want to be able to delete entire cart in case I don’t want to buy anything in the end.
+20. As a user I want to see cart even after I refresh page so I don’t loose saved products and have to redo the adding process.
 
 
