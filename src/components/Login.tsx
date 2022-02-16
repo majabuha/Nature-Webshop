@@ -1,12 +1,11 @@
 import React, { useContext, useEffect, useState } from 'react';
 import { UserData } from '../type/Users';
 import { AppContext } from '../state/context'
-import data from '../data.json'
 
 
 function LogIn() {
 
-    const { state, dispatch } = useContext(AppContext);
+ //   const { state, dispatch } = useContext(AppContext);
 
     const [username, setUsername] = useState('');
     const [password, setPassword] = useState('');
@@ -17,8 +16,6 @@ function LogIn() {
     const [lager, setLager] = useState(0);
     const [image, setImage] = useState<Blob[]>([]);
     const [imageURL, setImageURL] = useState<any>('');
-
-   // const [products, setProducts] = useState<any>([]);
 
     const [uNameIsVisited, setUNameIsVisited] = useState<boolean>(false)
     const [unameIsValid, uNameMsg] = isValidUsername(username);
@@ -113,33 +110,15 @@ function LogIn() {
             console.log('test-product');
 
         }
-        // setProducts(newUpdate)
-        // console.log(newUpdate);
     };
 
-    // if (!localStorage.getItem('products')) {
-    //     localStorage.setItem('products', JSON.stringify(data));
-    //     setProducts(data);
-    //     console.log(data)
-    // }
+    //     useEffect(() => {
 
-    // useEffect(() => {
-    //     if (localStorage.getItem('products')) {
-    //         let fetchProducts = JSON.parse(localStorage.getItem('products') || '[]');
-
-    //         setProducts(fetchProducts);
-    //         console.log(fetchProducts)
-    //     };
-
-    // }, []);
-
-        // useEffect(() => {
-
-    //     const getProducts = JSON.parse(localStorage.getItem("products") || '[]');
+    //     const fetchProducts = JSON.parse(localStorage.getItem("products") || '[]');
    
-    //     if (getLProducts) {            
+    //     if (fetchProducts) {            
     //         dispatch({
-    //             ...getProducts
+    //             ...fetchProducts
     //         })              
     //     } 
 
