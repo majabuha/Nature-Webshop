@@ -12,7 +12,7 @@ let productData = require('../data.json');
 
 export const initialState: IState = {
   overview: productData,
-  products: JSON.parse(localStorage.getItem("cart") || '[]'),
+  products: JSON.parse(localStorage.getItem("cart") || "[]"),
   showShoppingCart: false,
   lastAddedItem: {
     id: 0,

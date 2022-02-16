@@ -31,6 +31,7 @@ const Navbar = () => {
         searchResults(updateSearchTerm)
     }, [updateSearchTerm])
 
+    //let totAmountTest = state && state?.products || []
     let totalAmount = state.products.map(item => item.amount)
     let sumAmount = totalAmount.reduce(function (a, b) {
         return a + b;

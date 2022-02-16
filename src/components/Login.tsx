@@ -214,9 +214,7 @@ function LogIn() {
         }
 
         {
-            adminIsLoggedIn.username === 'admin@admin.com' ? (
-
-                
+            adminIsLoggedIn.username === 'admin@admin.com' ? (                
 
                     <form className='admin-new-product'>
 
