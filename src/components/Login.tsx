@@ -1,11 +1,12 @@
 import React, { useContext, useEffect, useState } from 'react';
 import { UserData } from '../type/Users';
-import { IState } from '../state/state'
 import { AppContext } from '../state/context'
 import data from '../data.json'
 
 
 function LogIn() {
+
+    const { state, dispatch } = useContext(AppContext);
 
     const [username, setUsername] = useState('');
     const [password, setPassword] = useState('');
@@ -17,10 +18,20 @@ function LogIn() {
     const [image, setImage] = useState<Blob[]>([]);
     const [imageURL, setImageURL] = useState<any>('');
 
-    const [products, setProducts] = useState<any>([]);
+   // const [products, setProducts] = useState<any>([]);
 
-    // const { state } = useContext(AppContext);
+    const [uNameIsVisited, setUNameIsVisited] = useState<boolean>(false)
+    const [unameIsValid, uNameMsg] = isValidUsername(username);
+    const uNameInputCss = !uNameIsVisited ? '' : (unameIsValid ? 'valid' : 'invalid')
+    const uNameMsgCss = (uNameIsVisited ? '' : 'invisible') + (unameIsValid ? '' : ' error' )
 
+    const [passwordIsVisited, setPasswordVisited] = useState<boolean>(false)
+    const [passwordIsValid, passwordMsg] = isValidPassword(password);
+    const passwordInputCss = !passwordIsVisited ? '' : (passwordIsValid ? 'valid' : 'invalid')
+    const passwordMsgCss = (passwordIsVisited ? '' : 'invisible') + (passwordIsValid ? '' : ' error' )
+
+    const formIsValid = unameIsValid && passwordIsValid
+ 
     const initialData: UserData = {
         id: Date.now(),
         username: username,
@@ -40,6 +51,7 @@ function LogIn() {
 
     const logInBtn = () => {
         if (!username || !password) {
+
             console.log('Please fill in all the details');
             return;
         }
@@ -54,19 +66,9 @@ function LogIn() {
             console.log('user logged in');
             localStorage.setItem('users', JSON.stringify(initialData));
 
-        } else if (username !== 'user@user.com' && password == 'user'
-            || username == 'user@user.com' && password !== 'user') {
-
-            alert('Username or password inccorect. Try again.')
-
-        } else if (username !== 'admin@admin.com' && password == 'admin'
-            || username == 'admin@admin.com' && password !== 'admin') {
-
-            alert('Username or password inccorect. Try again.')
-
         } else {
 
-            alert('user not found')
+            alert('User not found!')
             console.log('user not found');
         }
     };
@@ -111,29 +113,37 @@ function LogIn() {
             console.log('test-product');
 
         }
-        setProducts(newUpdate)
-        console.log(newUpdate);
+        // setProducts(newUpdate)
+        // console.log(newUpdate);
     };
 
-    // let test = localStorage.getItem('products')
-    // console.log(test);
+    // if (!localStorage.getItem('products')) {
+    //     localStorage.setItem('products', JSON.stringify(data));
+    //     setProducts(data);
+    //     console.log(data)
+    // }
 
-    if (!localStorage.getItem('products')) {
-        localStorage.setItem('products', JSON.stringify(data));
-        setProducts(data);
-        console.log(data)
-    }
+    // useEffect(() => {
+    //     if (localStorage.getItem('products')) {
+    //         let fetchProducts = JSON.parse(localStorage.getItem('products') || '[]');
 
+    //         setProducts(fetchProducts);
+    //         console.log(fetchProducts)
+    //     };
 
-    useEffect(() => {
-        if (localStorage.getItem('products')) {
-            let fetchProducts = JSON.parse(localStorage.getItem('products') || '[]');
+    // }, []);
 
-            setProducts(fetchProducts);
-            console.log(fetchProducts)
-        };
+        // useEffect(() => {
 
-    }, []);
+    //     const getProducts = JSON.parse(localStorage.getItem("products") || '[]');
+   
+    //     if (getLProducts) {            
+    //         dispatch({
+    //             ...getProducts
+    //         })              
+    //     } 
+
+    // }, [])
 
     useEffect(() => {
         if (image.length < 1) {
@@ -170,14 +180,17 @@ function LogIn() {
                         <label htmlFor="">
                             Username:{' '}
                             <input
+                                className={uNameInputCss}
                                 type="name"
                                 data-testid="username"
                                 placeholder="Type your username here"
                                 onChange={e => {
                                     setUsername(e.target.value);
                                 }}
+                                onBlur={() => setUNameIsVisited(true)}
                                 required
                             />
+                            <span className={uNameMsgCss}> {uNameMsg} </span>
                         </label>
                     </div>
 
@@ -185,6 +198,7 @@ function LogIn() {
                         <label htmlFor="">
                             Password:{' '}
                             <input
+                                className={passwordInputCss}
                                 data-testid="password"
                                 type="password"
                                 value={password}
@@ -192,19 +206,22 @@ function LogIn() {
                                 onChange={e => {
                                     setPassword(e.target.value);
                                 }}
+                                onBlur={() => setPasswordVisited(true)}
                                 required
                             />
+                            <span className={passwordMsgCss}> {passwordMsg} </span>
                         </label>
                     </div>
 
 
                     <div className="login-button">
                         <button
+                            disabled={!formIsValid}
                             data-testid="post-button"
                             className="login-botun"
                             onClick={logInBtn}>
                             LOG IN
-                        </button>
+                        </button>                   
                     </div>
 
                 </div>
@@ -288,17 +305,30 @@ function LogIn() {
                                 Add product
                             </button>
                         </div>
-                    </form>
-                
+                    </form>                
             )
                 :
                 null
         }
 
-
-
     </div>;
 }
+
+
+function isValidUsername(username:string): [boolean, string] {
+    if(username == 'admin@admin.com' || username == 'user@user.com') {
+        return [ true, '✔️']
+    } else 
+        return [false, '❌ wrong username']
+}
+
+function isValidPassword(password:string): [boolean, string] {
+    if(password == 'admin' || password == 'user') {
+        return [ true, '✔️']
+    } else 
+        return [false, '❌ wrong password']
+}
+
 
 export default LogIn;
 

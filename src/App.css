@@ -339,6 +339,48 @@ html {
   flex-direction: column;
 }
 
+
+/*---form---*/
+
+.login-form-wrapper {
+	transition: all 1s;
+	font-size: 1.2em;
+}
+.login-form-wrapper label {
+	display: flex;
+  flex-direction: column;
+	margin-top: 1.0em;
+  padding-left: .5rem;
+}
+.login-form-wrapper input {
+	border: 4px solid gray;
+	border-radius: 4px;
+	padding: 0.2em 0.4em;
+
+}
+.login-form-wrapper .valid {
+	border-color: green;
+}
+.login-form-wrapper .invalid {
+	border-color: red;
+}
+.invisible {
+	visibility: hidden;
+}
+
+.login-form-wrapper .error {
+	color: #E34343;
+}
+.login-form-wrapper button {
+	font-size: 1.1em;
+	padding: 0.2em 1em;
+	margin-top: 1em;
+	border-radius: 4px;
+}
+.login-form-wrapper button:hover {
+	cursor: pointer;
+}
+
 @media only screen and (max-width: 680px) {
   .product--item {
     width: 90%;

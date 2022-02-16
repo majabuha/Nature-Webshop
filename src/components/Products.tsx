@@ -4,32 +4,11 @@ import Item from './Item'
 //import data from '../data.json'
 
 const Products = () => {
-    //const [products, setProducts] = useState<any>([]);
     
     const { state } = useContext(AppContext);
 
-
-
     localStorage.setItem('products', JSON.stringify(state.overview))
  
-    // if (!localStorage.getItem('products')) {
-    //     localStorage.setItem('products', JSON.stringify(data));
-    //     setProducts(data);
-    //     console.log(data)
-    //   }
-
-    //   useEffect(() => {
-    //     if (localStorage.getItem('products')) {
-    //       let fetchProducts = JSON.parse(localStorage.getItem('products') || '[]');
-    
-    //       setProducts(fetchProducts);
-    //       console.log(fetchProducts)
-    //     };      
-    
-    //   }, []);
-
-
-
     return (
 
 
