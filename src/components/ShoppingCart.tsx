@@ -49,7 +49,7 @@ const ShoppingCart = () => {
             <button
                 className="shopping--button checkout"
                 data-testid="shopCkoBtn"
-                onClick={() => alert('This prototype has no checkout function!')}>
+                onClick={() => window.alert('This prototype has no checkout function!')}>
                 Checkout
             </button>
         </p>
